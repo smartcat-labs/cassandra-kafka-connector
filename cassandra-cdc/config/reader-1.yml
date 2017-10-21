@@ -1,0 +1,10 @@
+cassandra:
+  keyspace: custom
+  table: movies_by_genre
+  cdc_raw_directory: /tmp/cdc/cassandra-1/cdc_raw
+kafka:
+  topic: cdc-topic
+  configuration:
+    bootstrap.servers: 0.0.0.0:33028, 0.0.0.0:33029
+    key.serializer: org.apache.kafka.common.serialization.StringSerializer
+    value.serializer: org.apache.kafka.common.serialization.StringSerializer
